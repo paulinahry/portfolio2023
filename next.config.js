@@ -1,6 +1,20 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(pdf)$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'static/assets/cv',
+            publicPath: '/_next/static/assets/cv',
+          },
+        },
+      ],
+    })
+    return config
+  },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
