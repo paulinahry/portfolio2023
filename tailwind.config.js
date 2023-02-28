@@ -23,7 +23,8 @@ module.exports = {
       },
       fontFamily: {
         savete: "savete",
-        macherie: "macherie"
+        macherie: "macherie",
+        oswald: ["Oswald", "sans-serif"]
       },
       boxShadow: {
         standard: "0px 4px 4px rgba(0, 0, 0, 0.25)",
