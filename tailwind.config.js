@@ -15,7 +15,10 @@ module.exports = {
         basicOrange: '#e0883d',
         cvYellow: '#FDFDC6',
         cvBlue: '#8EBBBD',
-        transparent: 'transparent'
+        transparent: 'transparent',
+        'red-alpha': 'rgba(180, 58, 75, 0.866)',
+        'red-beta': 'rgba(253, 29, 29, 0.813)',
+        'yellow-gr': 'rgba(252, 176, 69, 0.846)',
       },
       fontFamily: {
         savete: "savete",

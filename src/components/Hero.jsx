@@ -84,7 +84,7 @@ function Hero() {
             </section>
             
             {/* PROFILE IMAGE */}
-            <div className='w-48 sm:w-56 lg:w-72 object-cover bg-white overflow-hidden rounded-full px-4' >
+            <div className='w-48 sm:w-56 lg:w-72 object-cover overflow-hidden rounded-full px-4' >
                 <Image src={PersonalImg} alt='girl' className='object-fit relative ' />
             </div>
             

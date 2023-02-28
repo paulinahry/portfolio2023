@@ -3,15 +3,12 @@ import React, { useState, useEffect } from 'react'
 // COMPONENTS
 import Socials from './Socials'
 //ICONS
+import ResumeBtn from './ResumeBtn'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 // img
 import PersonalProfileImg from '../assets/images/mypic-bg.png'
 import Image from 'next/image'
 import Link from 'next/link'
-import ResumeBtn from './ResumeBtn'
-// import Resume from '..assets/cv/Frontend_Paulina_Hryszko_2023.pdf'
-
-
 
 
 function Navigation() {
@@ -41,30 +38,11 @@ function Navigation() {
     setActivePage(value)
   }
 
-  // HANDLE PDF
-  const [pageNumber, setPageNumber] = useState(1);
-
-  function goToPrevPage() {
-    setPageNumber(pageNumber - 1);
-  }
-
-  function goToNextPage() {
-    setPageNumber(pageNumber + 1);
-  }
-
-
-  // const showCV = () => {
-  //   const fileURL = "/assets/cv/Frontend_Paulina_Hryszko_2023.pdf"
-  //   const pdfWindow = window.open()
-  //   pdfWindow.location.href = fileURL
-  // }
-  
-
   return (
 
     // ----------------NAVIGATION DESKTOP  ------------------- //
 
-    <nav id='navigation' className={scrolled ?  'scrolled p-0  bg-[#fcb045] fixed flex justify-between items-center w-full h-20 md:h-[100] z-[100] shadow-xl ' : 'bg-[#fcb045]  fixed flex justify-between items-center w-full h-20 md:h-[100] z-[100] shadow-xl p-2'}>
+    <nav id='navigation' className={scrolled ?  'scrolled p-0  bg-black fixed flex justify-between items-center w-full h-20 md:h-[100] z-[100] shadow-xl ' : 'bg-black  fixed flex justify-between items-center w-full h-20 md:h-[100] z-[100] shadow-xl p-2'}>
       
       <div className=' w-full px-2 2xl:px-16 '>
 
@@ -143,15 +121,16 @@ function Navigation() {
           
 
           {/* handle Side Bar Navigation  */}
+          
           <div className={navigation ? 
-            'fixed md:hidden bg-[#121212] left-0 top-0 w-[75%] sm:w-[60%] ms:w-[45%] h-screen  ease-in duration-300 ' 
-            : 'fixed left-[-150%] bg-[#121212]top-0 ease-in duration-300 ' }>
+            'fixed md:hidden bg-[#385b71] left-0 top-0 w-[75%] sm:w-[60%] ms:w-[45%] h-screen  ease-in duration-300 ' 
+            : 'fixed left-[-150%]  bg-[#385b71] top-0 ease-in duration-300 ' }>
 
 
             {/* SIDE BAR NAVIGATION HEADER  -> FOTO AND SIGN  */}
             <div className='flex items-center justify-between p-5 '>
                 <div className=' image  relative w-20 h-20 overflow-hidden bg-gradient-to-b from-red-500/100  to-white rounded-full '>
-                  <Image src={PersonalProfileImg}  layout='fill' className ='object-cover ' alt='Paulina Hryszko' />
+                  <Image src={PersonalProfileImg}  className ='object-cover ' alt='Paulina Hryszko' />
                 </div>
 
                 <div>

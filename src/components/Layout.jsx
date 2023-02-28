@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import ShootingStars from './ShootingStars';
+import background from '../assets/images/background.png'
 
 
 const Layout = ({ children }) => {
@@ -9,10 +10,8 @@ const Layout = ({ children }) => {
         <div 
           style={{ 
             background:  `
-            linear-gradient(0deg, 
-            rgba(180,58,75,0.8660057773109244) 0%, 
-            rgba(253,29,29,0.8127844887955182) 50%, 
-            rgba(252,176,69,0.8463979341736695) 100%)`,
+            linear-gradient(19deg, rgba(122,136,164,1) 0%, rgba(56,91,113,1) 50%, rgba(0,0,0,1) 100%)
+            `,
             color: 'white',
             width: '100%',
             height: '100%'
