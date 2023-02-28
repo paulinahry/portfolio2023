@@ -9,6 +9,7 @@ import Projects from '../src/components/Projects'
 import TechStack from '../src/components/TechStack'
 import Footer from '../src/components/Footer'
 import Layout from '../src/components/Layout'
+import IntroSign from '../src/components/IntroSign'
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
 
       <Layout > 
         <Navigation />
+        <IntroSign />
         <Hero />
         <About />
         <Projects />
