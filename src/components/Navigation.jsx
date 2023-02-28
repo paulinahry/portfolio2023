@@ -1,9 +1,9 @@
-import { Link as LinkScroll, animateScroll as scroll } from 'react-scroll'
+import { Link as LinkScroll} from 'react-scroll'
 import React, { useState, useEffect } from 'react'
 // COMPONENTS
 import Socials from './Socials'
-//ICONS
 import ResumeBtn from './ResumeBtn'
+//ICONS
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 // img
 import PersonalProfileImg from '../assets/images/mypic-bg.png'
@@ -123,8 +123,8 @@ function Navigation() {
           {/* handle Side Bar Navigation  */}
           
           <div className={navigation ? 
-            'fixed md:hidden bg-[#385b71] left-0 top-0 w-[75%] sm:w-[60%] ms:w-[45%] h-screen  ease-in duration-300 ' 
-            : 'fixed left-[-150%]  bg-[#385b71] top-0 ease-in duration-300 ' }>
+            'fixed md:hidden bg-black left-0 top-0 w-[75%] sm:w-[60%] ms:w-[45%] h-screen  ease-in duration-300 ' 
+            : 'fixed left-[-150%]  bg-black top-0 ease-in duration-300 ' }>
 
 
             {/* SIDE BAR NAVIGATION HEADER  -> FOTO AND SIGN  */}
