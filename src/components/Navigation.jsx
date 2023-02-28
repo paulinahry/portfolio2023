@@ -1,9 +1,9 @@
-import { Link as LinkScroll, animateScroll as scroll } from 'react-scroll'
+import { Link as LinkScroll} from 'react-scroll'
 import React, { useState, useEffect } from 'react'
 // COMPONENTS
 import Socials from './Socials'
-//ICONS
 import ResumeBtn from './ResumeBtn'
+//ICONS
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 // img
 import PersonalProfileImg from '../assets/images/mypic-bg.png'
@@ -56,7 +56,7 @@ function Navigation() {
           <li className='uppercase ml-10 text-sm hover:border-b '>
              <LinkScroll 
               onClick={ () => onClickActivePage('home')}
-              className={activePage === 'home' ? ' text-basicRed' : 'text-white'}
+              className={activePage === 'home' ? ' text-details' : 'text-white'}
               to='hero' spy={true}  offset={50} duration={500}>Home
              </LinkScroll>
           </li>
@@ -65,7 +65,7 @@ function Navigation() {
           <li className='uppercase ml-10  text-sm hover:border-b'>
             <LinkScroll
               onClick={ () => onClickActivePage('about')}
-                className={activePage === 'about' ? ' text-basicRed' : 'text-white'}
+                className={activePage === 'about' ? ' text-details' : 'text-white'}
                 to='about' spy={true} offset={-100} duration={500}> 
               About
             </LinkScroll>
@@ -74,7 +74,7 @@ function Navigation() {
           <li className='uppercase ml-10 text-sm hover:border-b w-20'>
             <LinkScroll 
               onClick={ () => onClickActivePage('tech-stack')}
-              className={activePage === 'tech-stack' ? ' text-basicRed' : 'text-white'}
+              className={activePage === 'tech-stack' ? ' text-details' : 'text-white'}
               to='techstack' spy={true}  offset={-100} duration={500}> 
                 Tech-Stack
             </LinkScroll>
@@ -83,7 +83,7 @@ function Navigation() {
           <li className='uppercase ml-10 text-sm hover:border-b'>
             <LinkScroll 
               onClick={ () => onClickActivePage('projects')}
-              className={activePage === 'projects' ? ' text-basicRed' : 'text-white'}
+              className={activePage === 'projects' ? ' text-details' : 'text-white'}
               to='projects' spy={true} offset={-100} duration={500}> 
                 Projects
             </LinkScroll>
@@ -92,7 +92,7 @@ function Navigation() {
           <li className='uppercase ml-10 text-sm hover:border-b'>
             <LinkScroll 
               onClick={ () => onClickActivePage('contact')}
-              className={activePage === 'contact' ? ' text-basicRed underline decoration-basicRed ' : 'text-white'}
+              className={activePage === 'contact' ? ' text-details underline decoration-details ' : 'text-white'}
               to='/' spy={true} offset={-150} duration={500}> 
                 Contact
             </LinkScroll>
@@ -123,13 +123,13 @@ function Navigation() {
           {/* handle Side Bar Navigation  */}
           
           <div className={navigation ? 
-            'fixed md:hidden bg-[#385b71] left-0 top-0 w-[75%] sm:w-[60%] ms:w-[45%] h-screen  ease-in duration-300 ' 
-            : 'fixed left-[-150%]  bg-[#385b71] top-0 ease-in duration-300 ' }>
+            'fixed md:hidden bg-black left-0 top-0 w-[75%] sm:w-[60%] ms:w-[45%] h-screen  ease-in duration-300 ' 
+            : 'fixed left-[-150%]  bg-black top-0 ease-in duration-300 ' }>
 
 
             {/* SIDE BAR NAVIGATION HEADER  -> FOTO AND SIGN  */}
             <div className='flex items-center justify-between p-5 '>
-                <div className=' image  relative w-20 h-20 overflow-hidden bg-gradient-to-b from-red-500/100  to-white rounded-full '>
+                <div className=' image  relative w-20 h-20 overflow-hidden bg-gradient-to-b from-details  to-white rounded-full '>
                   <Image src={PersonalProfileImg}  className ='object-cover ' alt='Paulina Hryszko' />
                 </div>
 

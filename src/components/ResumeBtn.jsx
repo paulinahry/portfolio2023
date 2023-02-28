@@ -8,7 +8,7 @@ const ResumeBtn = () => {
 
   return (
     <button 
-    className=' border-white  px-5 m-1'
+    className=' border-details text-details  px-5 m-1'
     onClick={handleClick}>
       resume
     </button>

@@ -45,18 +45,18 @@ function Hero() {
                         <ul className=' p-4 flex-col '>
 
                             <div className='flex'>
-                                <AiOutlineCheck color='red' size={20}/>
+                                <AiOutlineCheck className='text-details' size={20}/>
                                 <li className='items-center text-left ml-2'> Web Development</li>
                             </div>
 
                             <div className='flex'>
-                                <AiOutlineCheck color='red' size={20}/>
+                                <AiOutlineCheck className='text-details' size={20}/>
                                 <li className='items-center text-left ml-2' > Design </li>
                             </div>
 
 
                             <div className='flex'>
-                                <AiOutlineCheck color='red' size={20}/>
+                                <AiOutlineCheck className='text-details' size={20}/>
                                 <li className='items-center text-left ml-2' > Passion </li>
                             </div>
 
@@ -68,7 +68,7 @@ function Hero() {
                         
                         <button 
                         onClick={handleHireMe}
-                        className='w-32 m-2 bg-red-700/100 text-neutral-50 border-red-700'>
+                        className='w-32 m-2 bg-details text-black border-white'>
                             Let's connect
                         </button>
 
