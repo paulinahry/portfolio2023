@@ -18,15 +18,15 @@ export default function Home() {
         <meta name="description" content="MERN Fullstack Web Developer " />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-{/* 
-      <Layout > */}
+
+      <Layout > 
         <Navigation />
         <Hero />
         <About />
         <Projects />
         <TechStack />    
         <Footer />
-      {/* </Layout> */}
+      </Layout>
 
     </div>
   )

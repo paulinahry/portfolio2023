@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React from 'react'
 import {AiFillLinkedin, AiOutlineMail, AiFillGithub} from 'react-icons/ai'
 

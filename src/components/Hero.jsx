@@ -9,7 +9,7 @@ function Hero() {
 
     //  change it to formular ?
 
-    const HireMe = () => {
+    const handleHireMe = () => {
         const emailTo = "paulinahryszko.de@gmail.com"
         const emailCC = ""
         const emailSub = "Job offer"
@@ -67,14 +67,16 @@ function Hero() {
                     <div className='flex flex-col justify-center'>
                         
                         <button 
-                        onClick={HireMe}
-                        className='w-28 m-2 bg-red-700/100 text-neutral-50'>Hire me </button>
+                        onClick={handleHireMe}
+                        className='w-32 m-2 bg-red-700/100 text-neutral-50 border-red-700'>
+                            Let's connect
+                        </button>
 
-                        <button className='w-28 ml-2 border-white'>
+                        <button className='w-32 ml-2 border-white'>
                             <LinkScroll to='about' spy={true} smooth={true} offset={-100} duration={500}> 
                             About
                             </LinkScroll>
-                            </button>
+                        </button>
                     </div>
 
 

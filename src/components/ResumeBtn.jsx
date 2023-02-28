@@ -8,12 +8,11 @@ const ResumeBtn = () => {
 
   return (
     <button 
-    className=' border-white  px-5 m-1'
-    
-    onClick={handleClick}>
-      resume
+      className=' border-white  px-5'
+      onClick={handleClick}>
+        resume
     </button>
   )
 }
 
-export default ResumeBtn;
+export default ResumeBtn
