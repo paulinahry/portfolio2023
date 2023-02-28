@@ -22,7 +22,6 @@ function TechStack() {
         <div className='m-4'><SiMongodb size={55} />MongoDB</div>
         <div className='m-4'><SiFigma size={55} />Figma</div>
         <div className='m-4'><SiTailwindcss size={55} />Tailwind</div>
-        <div className='m-4'><SiBootstrap size={55} />Bootstrap</div>
         <div className='m-4'><SiGithub size={55} />Github</div>
       </div>
 
