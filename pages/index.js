@@ -9,6 +9,7 @@ import Projects from '../src/components/Projects'
 import TechStack from '../src/components/TechStack'
 import Footer from '../src/components/Footer'
 import Layout from '../src/components/Layout'
+import IntroSign from '../src/components/IntroSign'
 
 export default function Home() {
   return (
@@ -16,11 +17,14 @@ export default function Home() {
       <Head>
         <title>Paulina Hryszko | Full Stack Developer</title>
         <meta name="description" content="MERN Fullstack Web Developer " />
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"
+/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Layout > 
         <Navigation />
+        <IntroSign />
         <Hero />
         <About />
         <Projects />
