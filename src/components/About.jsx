@@ -33,7 +33,7 @@ function About() {
 
 
       <div className=' p-6 md:w-[45%] md:h-full xl:text-xl'>
-        <h3 className='text-m tracking-widest  uppercase py-2 border-b text-red-700/100 border-red-700/100'>From Wait to Web Developer: My Journey to Finding My Passion</h3>
+        <h3 className='text-m tracking-widest  uppercase py-2 border-b text-details border-details'>From Wait to Web Developer: My Journey to Finding My Passion</h3>
 
           <p className='py-2 '>
           Ladies and Gentlemen, 

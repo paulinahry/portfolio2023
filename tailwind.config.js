@@ -15,6 +15,7 @@ module.exports = {
         basicOrange: '#e0883d',
         cvYellow: '#FDFDC6',
         cvBlue: '#8EBBBD',
+        details: '#4ff7b2',
         transparent: 'transparent',
         'red-alpha': 'rgba(180, 58, 75, 0.866)',
         'red-beta': 'rgba(253, 29, 29, 0.813)',

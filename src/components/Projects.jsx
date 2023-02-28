@@ -7,7 +7,7 @@ function Projects() {
   return (
     <section id='projects' className='w-full p-3 flex items-center py-16'>
       <div className='max-w-[1240px] mx-auto px-2 py-16'>
-        <h3 className='text-m tracking-widest uppercase py-2 border-b text-red-700/100 border-red-700/100'>My projects</h3>
+        <h3 className='text-m tracking-widest uppercase py-2 border-b text-details border-details'>My projects</h3>
         <div>
           {
           cards?.map((card) => (
