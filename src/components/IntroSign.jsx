@@ -26,10 +26,11 @@ useEffect(() => {
     <section 
     aria-labe='intro-sign'
     className='
-    flex justify-center mb-4'>
+    h-screen 
+    flex justify-center items-center mb-4'>
 
     <div 
-    className="w-[250px] h-[250px] top-28 
+    className="w-[250px] h-[250px] 
     relative stroke-current flex justify-center flex-wrap  animate-sign rounded-full shadow-expand">
         <div className='uppercase retro-sign absolute top-4'>
             <span >JavaScript</span>

@@ -3,6 +3,7 @@ import React from 'react'
 import { Link as LinkScroll } from 'react-scroll'
 //imgages
 import PersonalImg from '../assets/images/mypic-bg.png'
+// icons
 import {AiOutlineCheck} from 'react-icons/ai'
 
 function Hero() {
@@ -17,19 +18,19 @@ function Hero() {
         const mailtoLink = `mailto:${emailTo}?cc=${emailCC}&subject=${emailSub}&body=${emailBody}`;
       
         try {
-          const emailWindow = window.open(mailtoLink, "_blank");
+          const emailWindow = window.open(mailtoLink, "_blank")
       
           if (!emailWindow) {
-            throw new Error("Email client window not opened");
+            throw new Error("Email client window not opened")
           }
         } catch (error) {
           console.error(error);
-          alert("Oops, something went wrong. Please try again later or use a different contact option.");
+          alert('Oops, something went wrong. Please try again later or use a form below.')
         }
-      };
+      }
       
   return (
-    <section  id='hero' className=' w-full h-screen p-2 text-center'>
+    <section  id='hero' className=' w-full m-5 p-2 text-center '>
 
         <div className='max-w-[1240px]  w-full h-full mx-auto p-2 flex justify-center items-center flex-col sm:flex-row'>
 
@@ -39,8 +40,9 @@ function Hero() {
                 <h1 className='text-3xl sm:text-4xl text-left uppercase p'>A creative <br /> Frontend Developer,<br /> based in Germany.</h1>
 
 
-                {/* LIST & CTA BUTTONS*/}
                 <div className='flex flex-row'>
+                    
+                {/* LIST */}
                     <div >
                         <ul className=' p-4 flex-col '>
 
