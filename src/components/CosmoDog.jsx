@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import anime from 'animejs';
 import Image from 'next/image'
-import cosmoDog from '../assets/images/cosmo-dog.png'
+import cosmoDog from '../assets/images/cosmo-about.png'
 
 
 
@@ -40,7 +40,7 @@ function CosmoDog() {
 
   return (
     <div ref={levitationRef}>
-        <Image src={cosmoDog} width='250px' height='250px'  />
+        <Image src={cosmoDog} width='350px' height='350px'  />
 
     </div>
   )
