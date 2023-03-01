@@ -41,24 +41,21 @@ body {
 }
 
 
-
+/* INTRO SIGN - RETRO */
 .retro-sign {
         /* font-style: italic; */
-        font-size: 3.5rem;
+        font-size: 4rem;
         text-align: center;
         color: rgb(255, 255, 255);
-        /* linear-gradient(19deg, 
-        rgba(0,0,0,1) 0%, 
-        rgba(56,91,113,1) 50%, 
-        rgba(0,0,0,1) 80%); */
         font-family: 'Oswald';
         font-weight: 700;
         text-shadow:    3px 3px 0px #d4a79f, 
                         5px 5px 0px #9999, 
                         7px 7px 0px #444e77, 
                         9px 9px 0px #017e7f
-    
 }
+/* INTRO SIGN - RETRO  END */
+
 
 
 /* SHOOTING STARS */
@@ -158,22 +155,3 @@ body {
   }
 
 /* SHOOTING STARS END  */
-
-
-
-/* sign animation */
-.animated-circle {
-  opacity: 0;
-}
-
-.animate-sign {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: draw 2s ease forwards;
-}
-
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
