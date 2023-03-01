@@ -13,10 +13,9 @@ useEffect(() => {
   })
 
   timeline
-
     .add({
       opacity: [0, 1],
-      duration: 5000,
+      duration: 4000,
     })
    
 }, [])
@@ -26,28 +25,30 @@ useEffect(() => {
     <section 
     aria-labe='intro-sign'
     className='
-    flex justify-center'>
+    flex justify-center mb-4'>
 
     <div 
-    className="shine w-[250px] h-[250px]  top-28 
+    className="w-[250px] h-[250px] top-28 
     relative stroke-current flex justify-center flex-wrap  animate-sign rounded-full shadow-expand">
-        <div className='uppercase retro-sign absolute top-4  '>
-            <span>Front</span>
+        <div className='uppercase retro-sign absolute top-4'>
+            <span >JavaScript</span>
             <br />
-            <span>End</span>
-            <br />
+            <span>ninja</span>
         </div>
 
-       <div className='rotate-[-19deg] relative'>
+       <div className='sm:rotate-[-19deg] relative'>
         <span 
         ref={shineRef}
-        className='retro-sign absolute left-[-8px] top-44 italic '>
-            developer</span>
+        className='retro-sign absolute italic w-[max-content]
+          top-52 left-[-130px]
+          sm:left-[-24px] sm:top-48 '
+          >
+            in training</span>
        </div>
     </div>
     </section>
 
-  );
+  )
 }
 
 export default IntroSign
