@@ -35,15 +35,12 @@ body {
     position: relative;
     font-family: Oswald ;
     letter-spacing: 1px;
-    /* background-image: url('../src/assets/images/background.png');
-    background-size: contain;
-    background-position: center; */
+    background-color: black;
 }
 
 
 /* INTRO SIGN - RETRO */
 .retro-sign {
-        /* font-style: italic; */
         font-size: 4rem;
         text-align: center;
         color: rgb(255, 255, 255);
