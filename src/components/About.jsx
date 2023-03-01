@@ -11,21 +11,16 @@ import CosmoDog from './CosmoDog';
 
 function About() {
 
-  
-
   return (
-    <>
-    
+  
     <section id='about' className=' h-full w-full flex flex-col md:flex-row items-center justify-center'>
 
-        <div className='  w-full md:w-[45%] md:h-full text-center'>
-        
-            {/*COSMO LEVITATING  */}
-              <CosmoDog />
-          
-        </div>
+      <div className='  w-full md:w-[45%] md:h-full text-center'>
+          {/*COSMO LEVITATING  */}
+            <CosmoDog />
+      </div>
 
-    {/* ABOUT ME TEXT */}
+        {/* ABOUT ME TEXT */}
       <div className=' p-6 md:w-[45%] md:h-full xl:text-xl'>
 
         <h3 className='text-m tracking-widest  uppercase py-2 border-b text-details border-details'>From Waitress to Web Developer</h3>
@@ -41,16 +36,9 @@ function About() {
             <span className='my-4'>Let's work together to make the web a more exciting and accessible place! </span> 
            </p>
 
-          
-
-
       </div>
 
     </section>
-
-
-    </>
-      
   )
 }
 
