@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import anime from 'animejs';
 
+
 function IntroSign() {
     const shineRef = useRef(null);
 
