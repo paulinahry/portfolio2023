@@ -1,7 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
-import ShootingStars from './ShootingStars';
-import background from '../assets/images/background.png'
+import React from 'react'
+import ShootingStars from './ShootingStars'
 
 
 const Layout = ({ children }) => {

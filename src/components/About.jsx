@@ -1,39 +1,49 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
+import anime from 'animejs';
+
 //imgages
 import Waitress from '../assets/images/waitress.png'
 import WebDeveloper from '../assets/images/laptopgirl.png'
+import cosmoDog from '../assets/images/cosmo-dog.png'
+import CosmoDog from './CosmoDog';
 
 
 function About() {
+
+  
 
   return (
     <>
     
     <section id='about' className=' h-full w-full flex flex-col md:flex-row items-center justify-center'>
 
-        <div className=' bg-red-200 w-full md:w-[45%] md:h-full text-center'>
+        <div className='  w-full md:w-[45%] md:h-full text-center'>
         
             {/*IMG H2 IMG  */}
             <div  className='max-w-[1240px] w-full p-2 flex justify-evenly items-center text-center'>
-
+            <div className='w-[25%] md:w-[50%] ' >
+              <CosmoDog />
+                    {/* <Image src={cosmoDog} width='200px' height='200px' alt='waitress'  /> */}
+                </div>
+{/* 
                 <div className='w-[25%] md:w-[50%] ' >
                     <Image src={Waitress} className='w-full scale-[55%]' alt='waitress'  />
                 </div>
 
                 <div className='w-[30%] '>
-                    <h2 className=' tracking-wider py-2 md:text-xl text-gray-700'>from waitress <br /> to <br /> web developer</h2>
+                    <h2 className=' tracking-wider py-2 md:text-xl '>from waitress <br /> to <br /> web developer</h2>
                 </div>
                
                 <div className='w-[30%] md:w-[50%]'>
                     <Image src={WebDeveloper} className='w-full' alt="working girl"   />
-                </div>
+                </div> */}
             </div>         
         </div>
 
 
       <div className=' p-6 md:w-[45%] md:h-full xl:text-xl'>
-        <h3 className='text-m tracking-widest  uppercase py-2 border-b text-details border-details'>From Wait to Web Developer: My Journey to Finding My Passion</h3>
+        <h3 className='text-m tracking-widest  uppercase py-2 border-b text-details border-details'>From Waitress to Web Developer: My Journey to Finding My Passion</h3>
 
           <p className='py-2 '>
           Ladies and Gentlemen, 
