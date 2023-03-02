@@ -7,8 +7,11 @@ import memorygame from '../assets/projects/memory.png'
 import reactLoginOut from '../assets/projects/start_page.png'
 import uibstart from '../assets/projects/uibstart.png'
 import tipClculator from '../assets/projects/tipCalc.png'
+import jobsy from '../assets/projects/jobsy.png'
+import portfolio from '../assets/projects/portfolio.png'
 // icons
 import AiOutlineArrowRight from 'react-icons/ai'
+import ProjectCard from './ProjectCard';
 
 function Projects() {
 
@@ -16,14 +19,14 @@ function Projects() {
     {
       title: 'My Personal Portfolio',
       stack: 'JavaScript, React, Tailwind, Nextjs' ,
-      imgSrc: '',
+      imgSrc: portfolio,
       vercel: '',
       github: ''
     },
     {
       title: 'Jobsy.',
-      stack: 'Typescript, React, Tailwind, MongoDB, Nodejs, Figma' ,
-      imgSrc: tipClculator,
+      stack: 'Typescript, React, MongoDB, Nodejs, Tailwind, Figma' ,
+      imgSrc: jobsy,
       vercel: 'https://jobsy-jobportal.netlify.app/adslist',
       github: 'https://github.com/paulinahry/jobportal'
     },
@@ -59,61 +62,25 @@ function Projects() {
   ]
   
 
-
   return (
     <section id='projects' className='w-full p-3 flex items-center py-16'>
 
       <div className='max-w-[1240px] mx-auto px-2 py-16'>
-        <h3 className='text-m tracking-widest uppercase py-2 border-b text-details border-details'>My projects</h3>
+        <h3 className='text-m tracking-widest uppercase py-2 border-b text-details border-details'>
+          My projects</h3>
         <div className='flex flex-wrap justify-center md:flex '>
-          {
-          cards.map((card) => (
-            <div key={card.title} 
-              className='mx-2 border rounded mt-4  p-2 
-              w-[15rem] max-w-[20rem] '
-            >
-             
-             <div className='h-[15rem] max-h-[20rem]  flex flex-col
-             bg-[${card.imgSrc}] object-contain
-             '>
-                <div className='mb-16'>
-                  <div className='mb-3'>
-                    <span className='underline block'>Project Name:</span>
-                    {' '}
-                    <span>{card.title}</span>
-                  </div>
-
-                  <div>
-                    <span className='underline block'>Tech Stack:</span>
-                    {' '}
-                    <span>{card.stack}</span>
-                  </div>
-                </div>
-
-
-              <div className=' flex  justify-around flex-col items-end '>
-
-                <Link 
-                  className='underline'
-                  href={card.github}>
-                    source code
-                </Link>
-
-                <Link
-                  className=' underline'
-                  href={card.vercel}>
-                    web site
-                </Link>
-              </div>
-
-              </div>
-            </div>
-          ))
-          }
+          
+            {
+            cards.map((card, index) => (
+              <ProjectCard key={index} {...card} />
+            ))
+            }
+          
         </div>
       </div>
+      <img src="" alt="" />
     </section>
   )
 }
 
-export default Projects;
+export default Projects
