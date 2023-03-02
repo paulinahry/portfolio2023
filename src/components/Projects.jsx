@@ -40,7 +40,15 @@ function Projects() {
       imgSrc: memorygame,
       vercel: 'https://programming-basisc-memory-game.vercel.app/',
       github: 'https://github.com/paulinahry/ProgrammingBasicFinalProjekt'
-    }
+    },
+    {
+      title: 'Food Blog',
+      stack: 'CSS(SASS), HTML5' ,
+      imgSrc: uibstart,
+      vercel: 'not deployed',
+      github: 'https://github.com/paulinahry/ProgrammingBasicFinalProjekt'
+    },
+
   ]
   
 

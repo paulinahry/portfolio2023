@@ -41,7 +41,6 @@ function CosmoDog() {
   return (
     <div ref={levitationRef} >
         <Image src={cosmoDog} width='350px' height='350px'  />
-
     </div>
   )
 }
