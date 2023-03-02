@@ -26,7 +26,7 @@ useEffect(() => {
     <section 
     aria-label='intro-sign'
     className='
-    h-screen 
+    h-screen max-w-[100%]
     flex justify-center items-center mb-4'>
 
     <div 
