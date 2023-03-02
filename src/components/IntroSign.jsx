@@ -16,7 +16,7 @@ useEffect(() => {
   timeline
     .add({
       opacity: [0, 1],
-      duration: 4000,
+      duration: Infinity,
     })
    
 }, [])
