@@ -42,7 +42,7 @@ function Navigation() {
 
     // ----------------NAVIGATION DESKTOP  ------------------- //
 
-    <nav id='navigation' className={scrolled ?  'scrolled p-0  bg-black fixed flex justify-between items-center w-full h-20 md:h-[100] z-[100] shadow-xl ' : 'bg-black  fixed flex justify-between items-center w-full h-20 md:h-[100] z-[100] shadow-xl p-2'}>
+    <nav id='navigation' className={scrolled ?  'scrolled p-0  bg-black fixed flex justify-between items-center w-full h-20 md:h-[100] z-[100] shadow-xl ' : 'bg-black  fixed flex justify-between items-center w-full h-20 md:h-[100] z-[100] shadow-xl'}>
       
       <div className=' w-full px-2 2xl:px-16 '>
 

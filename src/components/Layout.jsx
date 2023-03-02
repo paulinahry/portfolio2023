@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
         <div 
           style={{ 
             background:  `
-            linear-gradient(19deg, 
+            linear-gradient(18deg, 
               rgba(0,0,0,1) 0%, 
               rgba(56,91,113,1) 50%, 
               rgba(0,0,0,1) 80%)
