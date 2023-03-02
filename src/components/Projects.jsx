@@ -21,6 +21,13 @@ function Projects() {
       github: ''
     },
     {
+      title: 'Jobsy.',
+      stack: 'Typescript, React, Tailwind, MongoDB, Nodejs, Figma' ,
+      imgSrc: tipClculator,
+      vercel: 'https://jobsy-jobportal.netlify.app/adslist',
+      github: 'https://github.com/paulinahry/jobportal'
+    },
+    {
       title: 'Tip Calculator ',
       stack: 'Javascript, React, Tailwind' ,
       imgSrc: tipClculator,
@@ -29,20 +36,20 @@ function Projects() {
     },
     {
       title: 'Login Template',
-      stack: 'JavaScript, React, Firebase' ,
+      stack: 'JavaScript, React, Firebase, SASS' ,
       imgSrc: reactLoginOut,
       vercel: 'https://react-login-create-account.vercel.app/',
       github: 'https://github.com/paulinahry/react-login_createAccount'
     },
     {
-      title: 'Memory Game',
-      stack: 'Vanilla JavaScript' ,
+      title: 'Memory Game - basic JS knowladge' ,
+      stack: 'Vanilla JavaScript, CSS' ,
       imgSrc: memorygame,
       vercel: 'https://programming-basisc-memory-game.vercel.app/',
       github: 'https://github.com/paulinahry/ProgrammingBasicFinalProjekt'
     },
     {
-      title: 'Food Blog',
+      title: 'Food Blog - basic HTML and CSS knowladge',
       stack: 'CSS(SASS), HTML5' ,
       imgSrc: uibstart,
       vercel: 'not deployed',
@@ -61,27 +68,30 @@ function Projects() {
         <div className='flex flex-wrap justify-center md:flex '>
           {
           cards.map((card) => (
-            <div key={card.title}
-              className='mx-2 border rounded mt-4 w-[100%] max-w-[400px] p-2'
+            <div key={card.title} 
+              className='mx-2 border rounded mt-4  p-2 
+              w-[15rem] max-w-[20rem] '
             >
-              <img 
-              src={card.imgSrc} alt='project image' />
-              <div>
+             
+             <div className='h-[15rem] max-h-[20rem]  flex flex-col
+             bg-[${card.imgSrc}] object-contain
+             '>
+                <div className='mb-16'>
+                  <div className='mb-3'>
+                    <span className='underline block'>Project Name:</span>
+                    {' '}
+                    <span>{card.title}</span>
+                  </div>
 
-                <div>
-                  <span className='underline'>Project Name:</span>
-                  {' '}
-                  <span>{card.title}</span>
+                  <div>
+                    <span className='underline block'>Tech Stack:</span>
+                    {' '}
+                    <span>{card.stack}</span>
+                  </div>
                 </div>
 
-                <div>
-                  <span className='underline '>Tech Stack:</span>
-                  {' '}
-                  <span>{card.stack}</span>
-                </div>
 
-
-              <div className=' flex justify-around'>
+              <div className=' flex  justify-around flex-col items-end '>
 
                 <Link 
                   className='underline'
