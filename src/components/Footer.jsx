@@ -6,13 +6,16 @@ function Footer() {
   }
 
   return (
-    <footer className='flex justify-center flex-col sm:flex-row py-6 ' >
+    <footer className='flex justify-center py-6 mx-auto' >
+      <div className=' text-center'>
         <span > &copy; Copyrights 2023 by Paulina Hryszko | </span>
-      <div>
 
-          <span className='pl-1'>Image credits to: Icons 8 </span>
+          <p className='pl-1'>Image credits to: Icons 8 
           <span className=" text-gray-800 w-5 bg-green-200 rounded-full p-1 text-xs cursor-pointer ml-1" 
-          onClick={handleClick}>O!</span>
+          onClick={handleClick}
+          >O!</span>
+
+          </p>
       </div>
     </footer>
   )
