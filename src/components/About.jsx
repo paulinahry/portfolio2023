@@ -36,9 +36,9 @@ function About() {
 
       </div>
 
-      <div className='  w-full md:w-[45%] md:h-full text-center'>
+      <div className='hidden md:block w-full md:w-[45%] md:h-full text-center'>
           {/*COSMO LEVITATING  */}
-            <CosmoDog />
+            <CosmoDog/>
       </div>
 
     </section>

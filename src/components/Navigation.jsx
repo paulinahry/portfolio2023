@@ -42,7 +42,7 @@ function Navigation() {
 
     // ----------------NAVIGATION DESKTOP  ------------------- //
 
-    <nav id='navigation' className={scrolled ?  'scrolled p-0  bg-black fixed flex justify-between items-center w-full h-20 md:h-[100] z-[100] shadow-xl ' : 'bg-black  fixed flex justify-between items-center w-full h-20 md:h-[100] z-[100] shadow-xl'}>
+    <nav id='navigation' className={scrolled ?  'scrolled bg-black fixed flex justify-between items-center w-full h-20 md:h-[100] z-[100] shadow-xl ' : 'bg-black  fixed flex justify-between items-center w-full h-20 md:h-[100] z-[100] shadow-xl'}>
       
       <div className=' w-full px-2 2xl:px-16 '>
 
@@ -123,7 +123,7 @@ function Navigation() {
           {/* handle Side Bar Navigation  */}
           
           <div className={navigation ? 
-            'fixed md:hidden bg-black left-0 top-0 w-[75%] sm:w-[60%] ms:w-[45%] h-screen  ease-in duration-300 ' 
+            'fixed md:hidden bg-black left-0 top-0 w-[100%] sm:w-[60%] ms:w-[45%] h-screen  ease-in duration-300 ' 
             : 'fixed left-[-150%]  bg-black top-0 ease-in duration-300 ' }>
 
 
