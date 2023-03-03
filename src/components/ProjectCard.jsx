@@ -41,7 +41,7 @@ function ProjectCard ({ title, stack, imgSrc, vercel, github }) {
 
                 {/* DETAILS CONTAINER */}
                 <div className=
-                {`absolute bottom-12 w-full  bg-white bg-opacity-95  p-4 rounded 
+                {`absolute bottom-8 w-full  bg-white bg-opacity-95  p-4 
                 ${showDetails ? 'opacity-100' : 'opacity-0'} 
                 transition-opacity duration-300`}>
 
