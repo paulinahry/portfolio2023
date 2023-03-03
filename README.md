@@ -6,4 +6,4 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 <img src='./src/assets/projects/portfolio.png' width='500' height='450' />
 
 
-Click to see it live (https://www.portfolio2023-eta.vercel.app/)
+**Click to see it live** [Portfolio](https://portfolio2023-eta.vercel.app/)
