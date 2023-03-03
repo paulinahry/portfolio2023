@@ -30,7 +30,7 @@ function Hero() {
       }
       
   return (
-    <section  id='hero' className=' w-full m-5 p-2 text-center '>
+    <section  id='hero' className=' w-full p-2 text-center '>
 
         <div className='max-w-[1240px]  w-full h-full mx-auto p-2 flex justify-center items-center flex-col sm:flex-row'>
 

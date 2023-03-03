@@ -14,7 +14,7 @@ function ProjectCard ({ title, stack, imgSrc, vercel, github }) {
     return (
         <div 
         onMouseLeave={() => setShowDetails(false)}
-        className='project-card-container relative w-[22rem] h-[24rem] mx-2 border rounded mt-4'
+        className='project-card-container relative w-[16rem] h-[16rem] md:w-[21rem] md:h-[21rem] mx-2 border rounded mt-4'
         >
           
         <div className='w-full h-full'>
