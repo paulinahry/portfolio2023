@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import anime from 'animejs';
+import ShootingStars from './ShootingStars';
 
 
 function IntroSign() {
@@ -23,6 +24,7 @@ useEffect(() => {
   
 
   return (
+    <>
     <section 
     aria-label='intro-sign'
     className='
@@ -49,6 +51,7 @@ useEffect(() => {
        </div>
     </div>
     </section>
+    </>
 
   )
 }

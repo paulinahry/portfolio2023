@@ -14,11 +14,11 @@ const Layout = ({ children }) => {
               rgba(0,0,0,1) 80%)
             `,
             color: 'white',
-            // width: '100%',
-            // height: '100%'
+            width: '100%',
+            height: '100%'
           }}
           >
-            <ShootingStars/>
+            <ShootingStars />
             {children}
         </div>
     </>
