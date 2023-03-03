@@ -14,13 +14,16 @@ function ProjectCard ({ title, stack, imgSrc, vercel, github }) {
     return (
         <div 
         onMouseLeave={() => setShowDetails(false)}
-        className='project-card-container relative w-[16rem] h-[16rem] md:w-[21rem] md:h-[21rem] mx-2 border rounded mt-4'
+        className='project-card-container 
+        relative mx-2 border rounded mt-4
+        w-[16rem] h-[16rem] md:w-[21rem] md:h-[21rem] '
         >
           
         <div className='w-full h-full'>
             <div 
             aria-label='image-wrapper'
-            className='relative h-full grayscale hover:grayscale-0'>
+            className='relative h-full 
+            grayscale hover:grayscale-0'>
                     <Image
                         src={imgSrc} 
                         alt='project image' 
@@ -30,7 +33,9 @@ function ProjectCard ({ title, stack, imgSrc, vercel, github }) {
                 {/*SHOW DETAILS  */}
                 <div 
                 onClick={handleShowDetails}
-                className=' absolute bottom-0 right-0 grayscale-0 w-full bg-white  bg-opacity-90'
+                className=' absolute w-full
+                bottom-0 right-0 grayscale-0  
+                bg-white  bg-opacity-90'
                 >
                     <SiSpreadshirt size={22} className='text-details cursor-pointer z-20 inline m-1'  />
                     <span className='text-gray-600 cursor-pointer'>click to read more... </span>
