@@ -9,6 +9,7 @@ import Footer from '../src/components/Footer'
 import Layout from '../src/components/Layout'
 import IntroSign from '../src/components/IntroSign'
 import { ContactForm } from '../src/components/ContactForm'
+import ContactMe from '../src/components/ContactMe'
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
         <About />
         <Projects />
         <TechStack />   
+        <ContactMe />
         <ContactForm />
         <Footer />
       </Layout>

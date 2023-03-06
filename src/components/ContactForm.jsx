@@ -31,7 +31,7 @@ export const ContactForm = () => {
       <form ref={form} 
       onSubmit={sendEmail}
       className='m-4 flex flex-col w-[80%]
-      md:w-[55%] justify-center'
+      md:w-[50%] lg:w-[40%] justify-center'
       >
 
         <label>Name</label>
@@ -48,6 +48,7 @@ export const ContactForm = () => {
 
         <label>Message</label>
         <textarea 
+        rows={6}
         className='text-black  rounded-sm' required name="message" />
 
 
