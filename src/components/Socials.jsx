@@ -9,7 +9,7 @@ function Socials() {
       }
   return (
   
-    <div className=' flex item-center justify-center sm:w-[80%] pt-16 rounded-full cursor-pointer '>
+    <div className=' flex item-center justify-center sm:w-[80%] cursor-pointer '>
         <a href='https://www.linkedin.com/in/paulina-hryszko/'>
             <AiFillLinkedin className='mr-2'size={30}/>
         </a>

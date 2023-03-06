@@ -5,6 +5,7 @@ import { Link as LinkScroll } from 'react-scroll'
 import PersonalImg from '../assets/images/mypic-bg.png'
 // icons
 import {AiOutlineCheck} from 'react-icons/ai'
+import Socials from './Socials'
 
 function Hero() {
 
@@ -12,16 +13,15 @@ function Hero() {
 
     const handleHireMe = () => {
         const emailTo = "paulinahryszko.de@gmail.com"
-        const emailCC = ""
-        const emailSub = "Job offer"
-        const emailBody = `Dear Paulina,\n\nI am writing to inquire about potential job opportunities with you. I am..., my company is engaged in... \nI would like to discuss.... \n\nBest regards,\n[Your Name]`;
-        const mailtoLink = `mailto:${emailTo}?cc=${emailCC}&subject=${emailSub}&body=${emailBody}`;
+        const emailSub = "Contact through Portfolio"
+        const emailBody = `Hi Paulina,\n\n\nI would like to discuss.... \n\nBest regards,\n[Your Name]`
+        const mailtoLink = `mailto:${emailTo}&subject=${emailSub}&body=${emailBody}`
       
         try {
           const emailWindow = window.open(mailtoLink, "_blank")
       
           if (!emailWindow) {
-            throw new Error("Email client window not opened")
+            throw new Error('Email client window not opened')
           }
         } catch (error) {
           console.error(error);
@@ -66,7 +66,7 @@ function Hero() {
                     </div>
 
                     {/*  CTA BUTTONS */}
-                    <div className='flex flex-col justify-center'>
+                    <div className='flex flex-col justify-center items-center'>
                         
                         <button 
                         onClick={handleHireMe}
@@ -74,11 +74,13 @@ function Hero() {
                             Let's connect
                         </button>
 
-                        <button className='w-32 ml-2 border-white'>
-                            <LinkScroll to='about' spy={true} smooth={true} offset={-100} duration={500}> 
+                        {/* <button className='w-32 ml-2 border-white'> */}
+                            <Socials />
+
+                            {/* <LinkScroll to='about' spy={true} smooth={true} offset={-100} duration={500}> 
                             About
-                            </LinkScroll>
-                        </button>
+                            </LinkScroll> */}
+                        {/* </button> */}
                     </div>
 
 
@@ -87,7 +89,7 @@ function Hero() {
             
             {/* PROFILE IMAGE */}
             <div className='w-48 sm:w-56 lg:w-72 object-cover overflow-hidden rounded-full px-4' >
-                <Image src={PersonalImg} alt='girl' className='object-fit relative ' />
+                <Image src={PersonalImg} alt='Paulina Hryszko' className='object-fit relative ' />
             </div>
             
         </div>
