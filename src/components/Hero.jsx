@@ -74,8 +74,8 @@ function Hero() {
                             Let's connect
                         </button>
 
-                        {/* <button className='w-32 ml-2 border-white'> */}
                             <Socials />
+                        {/* <button className='w-32 ml-2 border-white'> */}
 
                             {/* <LinkScroll to='about' spy={true} smooth={true} offset={-100} duration={500}> 
                             About
