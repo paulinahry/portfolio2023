@@ -10,7 +10,7 @@ import {SiMongodb, SiJavascript, SiTailwindcss, SiFigma, SiBootstrap, SiGithub} 
 
 function TechStack() {
   return (
-    <section id='techstack'>
+    <section id='tech-stack'>
       <div className=' flex flex-wrap justify-center '>
 
         <div className='m-4'><RiHtml5Line size={55} />HTML5</div>
