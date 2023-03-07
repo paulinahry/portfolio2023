@@ -12,15 +12,13 @@ import Image from 'next/image'
 
 function Navigation() {
 
-  // HANDLE SIDE MOBILE MENU 
   const [navigation, setNavigation] = useState(false)   
   const [scrolled, isScrolled] = useState(false) 
-
   const [activePage, setActivePage] = useState('hero') 
 
 
   
-// change activePage when scrolling
+// change activePage when scrolling in desktop 
   const handleScrollView = () => {
 
     const currentPosition = window.scrollY
@@ -66,7 +64,7 @@ function Navigation() {
   }, [])
 
 
-  
+  // scrolling effect
   const handleScroll = (sectionID) => {
     setActivePage(sectionID)
     scroller.scrollTo(sectionID, {
@@ -78,6 +76,8 @@ function Navigation() {
     })
   }
 
+
+  // handle mobile navigation
   function handleNavigation() {
     setNavigation(!navigation)
   }
