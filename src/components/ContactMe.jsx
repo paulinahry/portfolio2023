@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import Socials from './Socials';
+import React, { useState, useEffect } from 'react'
+import Socials from './Socials'
 
 function ContactMe() {
-  const [iconsSize, setIconsSize] = useState(90);
+  const [iconsSize, setIconsSize] = useState(90)
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,11 +25,11 @@ function ContactMe() {
             <span className='block uppercase text-white'>me</span>
         </p>
 
-        <div className='md:pl-20'> 
+        <div className='pt-6 ml-4 md:pl-20 md:pt-2'> 
             <Socials size={iconsSize} direction='flex-col' />
         </div>
     </section>
-  );
+  )
 }
 
 export default ContactMe
