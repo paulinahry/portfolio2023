@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import { Link as LinkScroll } from 'react-scroll'
 import { scroller } from 'react-scroll'
 //imgages
 import PersonalImg from '../assets/images/mypic-bg.png'
