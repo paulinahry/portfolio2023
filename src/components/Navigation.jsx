@@ -70,7 +70,7 @@ function Navigation() {
     scroller.scrollTo(sectionID, {
       duration: 500,
       smooth: true,
-      offset: -100,
+      offset: -200,
       spy: true,
       
     })

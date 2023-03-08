@@ -15,8 +15,8 @@ export default function Home() {
   return (
     <div >
       <Head>
-        <title>Paulina Hryszko | Full Stack Developer</title>
-        <meta name="description" content="MERN Fullstack Web Developer " />
+        <title>Paulina Hryszko | Frontend Developer</title>
+        <meta name="description" content="Frontend Web Developer based in Germany" />
         <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
