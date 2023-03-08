@@ -65,8 +65,8 @@ function Projects() {
   return (
     <section id='projects' className='flex items-center py-10'>
 
-      <div className='max-w-[1240px] mx-auto py-16'>
-        <h3 className='text-m tracking-widest uppercase py-2 border-b text-details border-details'>
+      <div className='max-w-[1240px] mx-auto  p-6'>
+        <h3 className='text-m tracking-widest uppercase  border-b text-details border-details'>
           My projects</h3>
         <div className='flex flex-wrap justify-center md:flex '>
           
