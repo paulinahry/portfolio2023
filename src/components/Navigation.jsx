@@ -13,7 +13,6 @@ import Image from 'next/image'
 function Navigation() {
 
   const [navigation, setNavigation] = useState(false)   
-  const [scrolled, isScrolled] = useState(false) 
   const [activePage, setActivePage] = useState('hero') 
 
 
@@ -66,11 +65,10 @@ function Navigation() {
 
   // scrolling effect
   const handleScroll = (sectionID) => {
-    setActivePage(sectionID)
     scroller.scrollTo(sectionID, {
       duration: 500,
       smooth: true,
-      offset: -200,
+      offset: -400,
       spy: true,
       
     })
@@ -87,7 +85,7 @@ function Navigation() {
 
     // ----------------NAVIGATION DESKTOP  ------------------- //
 
-    <nav id='navigation' className={scrolled ?  'scrolled bg-black fixed flex justify-between items-center w-full h-20 md:h-[100] z-[100] shadow-xl ' : 'bg-black  fixed flex justify-between items-center w-full h-20 md:h-[100] z-[100] shadow-xl'}>
+    <nav id='navigation' className='bg-black  fixed flex justify-between items-center w-full h-20 md:h-[100] z-[100] shadow-xl'>
       
       <div className=' w-full px-2 2xl:px-16 '>
 
@@ -103,7 +101,10 @@ function Navigation() {
           ${activePage === 'hero' ? 'text-details' : 'text-white'}
           uppercase ml-10 text-sm hover:border-b `}>
              <LinkScroll 
-                onClick={()=> handleScroll('hero')}>
+               onClick={() => {
+                handleScroll('hero')
+                setActivePage('hero')
+              }}>
               Home
              </LinkScroll>
           </li>
@@ -113,7 +114,10 @@ function Navigation() {
           ${activePage === 'about' ? 'text-details' : 'text-white'}
           uppercase ml-10 text-sm hover:border-b `}>
             <LinkScroll 
-            onClick={()=> handleScroll('about')}>
+             onClick={() => {
+              handleScroll('about');
+              setActivePage('about');
+            }}>
               About
             </LinkScroll>
           </li>
@@ -121,8 +125,11 @@ function Navigation() {
           <li className={`
           ${activePage === 'projects' ? 'text-details' : 'text-white'}
           uppercase ml-10 text-sm hover:border-b`}>
-            <LinkScroll 
-            onClick={()=> handleScroll('projects')}>
+             <LinkScroll 
+              onClick={() => {
+                handleScroll('projects');
+                setActivePage('projects');
+              }}>
                 Projects
             </LinkScroll>
           </li>
@@ -131,7 +138,10 @@ function Navigation() {
           ${activePage === 'tech-stack' ? 'text-details' : 'text-white'}
           uppercase ml-10 text-sm hover:border-b w-20`}>
             <LinkScroll 
-             onClick={()=> handleScroll('tech-stack')}>
+              onClick={() => {
+                handleScroll('tech-stack');
+                setActivePage('tech-stack');
+              }}>
               Tech-stack
             </LinkScroll>
           </li>
@@ -139,8 +149,11 @@ function Navigation() {
           <li className={`
           ${activePage === 'contactMe' ? 'text-details' : 'text-white'}
           uppercase ml-10 text-sm hover:border-b`}>
-            <LinkScroll 
-             onClick={()=> handleScroll('contactMe')}>
+              <LinkScroll 
+                onClick={() => {
+                  handleScroll('contactMe');
+                  setActivePage('contactMe');
+                }}>
                 Contact
             </LinkScroll>
           </li>

@@ -16,7 +16,7 @@ return (
     onMouseLeave={() => setShowDetails(false)}
     className='project-card-container 
     relative mx-2 border rounded mt-4
-    w-[16rem] h-[16rem] md:w-[21rem] md:h-[21rem] '
+    w-[16rem] h-[16rem] md:w-[19rem] md:h-[19rem] '
     >
         
     <div className='w-full h-full'>

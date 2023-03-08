@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { ContactForm } from './ContactForm'
 import Socials from './Socials'
 
 function ContactMe() {
@@ -18,16 +19,24 @@ function ContactMe() {
   }, [])
 
   return (
-    <section id='contactMe' className='flex justify-center '>
+
+    <section id='contactMe'>
+      <div className=' flex justify-center'>
+
         <p className='uppercase text-details text-[4rem] sm:text-[6rem] font-bold tracking-wide '>
             contact 
             {' '}
             <span className='block uppercase text-white'>me</span>
         </p>
 
-        <div className='pt-6 ml-4 md:pl-20 md:pt-2'> 
+        <div className='pt-6 ml-4 md:pl-20 md:pt-3'> 
             <Socials size={iconsSize} direction='flex-col' />
         </div>
+        
+      </div>
+
+        <ContactForm />
+
     </section>
   )
 }
