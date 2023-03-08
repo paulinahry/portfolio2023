@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { FaReact } from 'react-icons/fa';
 import { RiHtml5Line } from 'react-icons/ri';
-import { DiCss3, DiJavascript, DiNodejs, DiNodejsSmall, DiSass } from 'react-icons/di';
-import { SiMongodb, SiJavascript, SiTailwindcss, SiFigma, SiBootstrap, SiGithub } from 'react-icons/si';
+import { DiCss3, DiJavascript, DiNodejsSmall, DiSass } from 'react-icons/di';
+import { SiTailwindcss, SiFigma, SiGithub } from 'react-icons/si';
+import { BsFillSuitHeartFill, BsHeart } from 'react-icons/bs';
 import { CircularProgressbar, CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import VisibilitySensor from 'react-visibility-sensor';
@@ -114,6 +115,20 @@ function TechStack() {
             <SiFigma size={55} /> Figma
           </div>
             <AnimatedCircularProgressbar percentage={80} />
+        </div>
+
+        <div className='m-4'>
+          <div style={iconsStyle}>
+            <SiGithub size={55} /> GitHub
+          </div>
+            <AnimatedCircularProgressbar percentage={80} />
+        </div>
+
+        <div className='m-4'>
+          <div style={iconsStyle}>
+            <BsHeart size={55} /> Heart
+          </div>
+            <AnimatedCircularProgressbar percentage={100} />
         </div>
 
       </div>
