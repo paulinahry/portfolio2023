@@ -6,7 +6,6 @@ import { scroller } from 'react-scroll'
 import PersonalImg from '../assets/images/mypic-bg.png'
 // icons
 import {AiOutlineCheck} from 'react-icons/ai'
-import Socials from './Socials'
 
 function Hero() {
 
@@ -24,7 +23,7 @@ function Hero() {
     <section  id='hero' className=' w-full p-2 text-center '>
       <div className='max-w-[1240px]  w-full h-full mx-auto p-2 flex justify-center items-center flex-col sm:flex-row'>
         {/* INTRO */}
-        <section className='w-full sm:w-[50%] px-2 py-4 ' >
+        <div className='w-full sm:w-[50%] px-2 py-4 ' >
           <h2 className='text-4xl s:text-5xl text-left uppercase'>Hi, I'm Paulina.</h2>
           <h1 className='text-3xl sm:text-4xl text-left uppercase p'>A creative <br /> Frontend Developer,<br /> based in Germany.</h1>
           <div className='flex flex-row'>
@@ -60,7 +59,7 @@ function Hero() {
               </button>
             </div>
           </div>
-        </section>
+        </div>
         {/* PROFILE IMAGE */}
         <div className='w-48 sm:w-56 lg:w-72 object-cover overflow-hidden rounded-full px-4' >
           <Image src={PersonalImg} alt='Paulina Hryszko' className='object-fit relative ' />

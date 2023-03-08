@@ -1,7 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-
 // images
 import memorygame from '../assets/projects/memory.png'
 import reactLoginOut from '../assets/projects/start_page.png'
@@ -9,9 +6,7 @@ import uibstart from '../assets/projects/uibstart.png'
 import tipClculator from '../assets/projects/tipCalc.png'
 import jobsy from '../assets/projects/jobsy.png'
 import portfolio from '../assets/projects/portfolio.png'
-// icons
-import AiOutlineArrowRight from 'react-icons/ai'
-import ProjectCard from './ProjectCard';
+import ProjectCard from './ProjectCard'
 
 function Projects() {
 
@@ -65,10 +60,10 @@ function Projects() {
   return (
     <section id='projects' className='flex items-center py-10'>
 
-      <div className='max-w-[1240px] mx-auto  p-6'>
+      <div className=' w-full p-6'>
         <h3 className='text-m tracking-widest uppercase  border-b text-details border-details'>
           My projects</h3>
-        <div className='flex flex-wrap justify-center md:flex '>
+        <div className='flex flex-wrap justify-center md:flex lg:w-[80%] mx-auto pt-5 '>
           
             {
             cards.map((card, index) => (
@@ -78,7 +73,6 @@ function Projects() {
           
         </div>
       </div>
-      <img src="" alt="" />
     </section>
   )
 }

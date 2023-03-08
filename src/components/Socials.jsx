@@ -19,7 +19,7 @@ function Socials(props) {
             throw new Error('Email client window not opened')
           }
         } catch (error) {
-          console.error(error);
+          console.error(error)
           alert('Oops, something went wrong. Please try again later or use a form below.')
         }
       }
@@ -29,7 +29,7 @@ function Socials(props) {
 
   return (
   
-    <div className={`flex justify-center  sm:pt-6 ${direction}
+    <div className={`flex justify-center  ${direction}
      cursor-pointer   `}>
         <Link href='https://www.linkedin.com/in/paulina-hryszko/'>
             <AiFillLinkedin className='mr-2'size={iconSize}/>
