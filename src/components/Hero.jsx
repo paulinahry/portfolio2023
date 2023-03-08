@@ -46,6 +46,7 @@ function Hero() {
             </div>
             {/*  CTA BUTTONS */}
             <div className='flex flex-col justify-center items-center'>
+
               <button 
               onClick={()=>handleScroll('contactMe')} 
               className='w-32 m-2 bg-details text-black border-white'>
@@ -54,9 +55,10 @@ function Hero() {
 
               <button 
               onClick={()=>handleScroll('about')}
-              className='w-32 ml-2 border-white'> 
+              className='w-32  border-white'> 
                   About
               </button>
+
             </div>
           </div>
         </div>

@@ -53,7 +53,7 @@ function TechStack() {
   return (
 
 
-    <section id='tech-stack' className='p-6'>
+    <section id='tech-stack' className='p-6 lg:w-[80%] lg:mx-auto mb-20'>
 
       <h2 className='text-m tracking-widest  uppercase py-2 border-b text-details border-details'>Tech Stack</h2>
       <div className='flex flex-wrap justify-center  mx-auto mt-7 lg:w-[80%]'>

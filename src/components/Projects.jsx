@@ -58,12 +58,12 @@ function Projects() {
   
 
   return (
-    <section id='projects' className='flex items-center py-10'>
+    <section id='projects' className='flex items-center py-10 lg:w-[80%] lg:mx-auto '>
 
       <div className=' w-full p-6'>
         <h3 className='text-m tracking-widest uppercase  border-b text-details border-details'>
           My projects</h3>
-        <div className='flex flex-wrap justify-center md:flex lg:w-[80%] mx-auto pt-5 '>
+        <div className='flex flex-wrap justify-center md:flex mx-auto pt-5 '>
           
             {
             cards.map((card, index) => (
