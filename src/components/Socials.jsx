@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import {AiFillLinkedin, AiOutlineMail, AiFillGithub} from 'react-icons/ai'
 
@@ -30,17 +31,17 @@ function Socials(props) {
   
     <div className={`flex justify-center  sm:pt-6 ${direction}
      cursor-pointer   `}>
-        <a href='https://www.linkedin.com/in/paulina-hryszko/'>
+        <Link href='https://www.linkedin.com/in/paulina-hryszko/'>
             <AiFillLinkedin className='mr-2'size={iconSize}/>
-        </a>
+        </Link>
 
-        <a href='https://github.com/paulinahry'>
+        <Link href='https://github.com/paulinahry'>
             <AiFillGithub className='mr-2' size={iconSize} />
-        </a>
+        </Link>
 
-        <a onClick={mailMe}>
+        <Link href='' onClick={mailMe}>
              <AiOutlineMail className='mr-2' size={iconSize} />
-        </a>
+        </Link>
     </div>
 
 
