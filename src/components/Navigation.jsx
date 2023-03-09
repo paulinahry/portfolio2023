@@ -1,85 +1,79 @@
-import { Link as LinkScroll, scroller} from 'react-scroll'
+import { Link as LinkScroll, scroller } from 'react-scroll'
 import React, { useState, useEffect } from 'react'
 // COMPONENTS
 import Socials from './Socials'
 import ResumeBtn from './ResumeBtn'
 //ICONS
-import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 // img
 import PersonalProfileImg from '../assets/images/mypic-bg.png'
 import Image from 'next/image'
 
 
 function Navigation() {
-
-  const [navigation, setNavigation] = useState(false)   
-  const [activePage, setActivePage] = useState('hero') 
-
-
-  
-// change activePage when scrolling in desktop 
-  const handleScrollView = () => {
-
-    const currentPosition = window.scrollY
-
-    const homeSection = document.getElementById('hero')
-    const aboutSection = document.getElementById('about')
-    const projectsSection = document.getElementById('projects')
-    const techStackSection = document.getElementById('tech-stack')
-    const contactMeSection = document.getElementById('contactMe')
-
-    if (
-      currentPosition <= homeSection.offsetTop
-    ) {
-      setActivePage('hero')
-      
-    } else if (
-      currentPosition >= aboutSection.offsetTop &&
-      currentPosition < projectsSection.offsetTop
-    ) {
-      setActivePage('about')
-
-    } else if (
-      currentPosition >= projectsSection.offsetTop &&
-      currentPosition < techStackSection.offsetTop
-    ) {
-      setActivePage('projects')
-
-    } else if (
-      currentPosition >= techStackSection.offsetTop &&
-      currentPosition < contactMeSection.offsetTop
-    ) {
-      setActivePage('tech-stack')
-
-    } else if (currentPosition >= contactMeSection.offsetTop) {
-      setActivePage('contactMe')
-    }
-    
-  }
+  const [navigation, setNavigation] = useState(false);
+  const [activePage, setActivePage] = useState("hero");
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScrollView)
-    return () => window.removeEventListener('scroll', handleScrollView)
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll)
+    // Remove scroll event listener on cleanup
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    };
   }, [])
 
+  // Scroll to section and update active page
+  const handleScroll = () => {
+    const sections = ['hero', 'about', 'projects', 'tech-stack', 'contactMe']
+    const sectionOffsets = sections.map(sectionID => {
+      const el = document.getElementById(sectionID)
+      return el.offsetTop - 100; // Adjust for fixed navigation bar height
+    });
+    const scrollPosition = window.scrollY
+    const activeIndex = sectionOffsets.findIndex(offset => scrollPosition < offset)
+    const newActivePage = activeIndex === -1 ? sections[sections.length - 1] : sections[activeIndex]
+    setActivePage(newActivePage)
+  }
 
-  // scrolling effect
-  const handleScroll = (sectionID) => {
+  // Scroll to section and update active page
+  const handleSectionClick = (sectionID) => {
+    let offset = 0;
+    switch (sectionID) {
+      case 'hero':
+        offset = -400
+        break;
+      case 'about':
+        offset = -100
+        break;
+      case 'projects':
+        offset = -50
+        break;
+      case 'tech-stack':
+        offset = -150
+        break;
+      case 'contactMe':
+        offset = 200
+        break;
+      default:
+        offset = 0
+    }
+  
     scroller.scrollTo(sectionID, {
       duration: 500,
       smooth: true,
-      offset: -400,
+      offset,
       spy: true,
-      
+      onAfter: () => {
+        setActivePage(sectionID)
+      },
     })
   }
-
-
+  
   // handle mobile navigation
   function handleNavigation() {
     setNavigation(!navigation)
   }
-
 
   return (
 
@@ -91,7 +85,7 @@ function Navigation() {
 
         <a   
         className='cursor-pointer'            
-        onClick={()=>handleScroll('hero')} >
+        onClick={() => handleSectionClick('hero')}>
            <h2 className='uppercase'>Paulina Hryszko</h2> 
         </a>
       </div>
@@ -101,10 +95,7 @@ function Navigation() {
           ${activePage === 'hero' ? 'text-details' : 'text-white'}
           uppercase ml-10 text-sm hover:border-b `}>
              <LinkScroll 
-               onClick={() => {
-                handleScroll('hero')
-                setActivePage('hero')
-              }}>
+              onClick={() => handleSectionClick('hero')}>
               Home
              </LinkScroll>
           </li>
@@ -114,10 +105,7 @@ function Navigation() {
           ${activePage === 'about' ? 'text-details' : 'text-white'}
           uppercase ml-10 text-sm hover:border-b `}>
             <LinkScroll 
-             onClick={() => {
-              handleScroll('about');
-              setActivePage('about');
-            }}>
+             onClick={() => handleSectionClick('about')}>
               About
             </LinkScroll>
           </li>
@@ -126,10 +114,7 @@ function Navigation() {
           ${activePage === 'projects' ? 'text-details' : 'text-white'}
           uppercase ml-10 text-sm hover:border-b`}>
              <LinkScroll 
-              onClick={() => {
-                handleScroll('projects');
-                setActivePage('projects');
-              }}>
+             onClick={() => handleSectionClick('projects')}>
                 Projects
             </LinkScroll>
           </li>
@@ -138,10 +123,7 @@ function Navigation() {
           ${activePage === 'tech-stack' ? 'text-details' : 'text-white'}
           uppercase ml-10 text-sm hover:border-b w-20`}>
             <LinkScroll 
-              onClick={() => {
-                handleScroll('tech-stack');
-                setActivePage('tech-stack');
-              }}>
+              onClick={() => handleSectionClick('tech-stack')}>
               Tech-stack
             </LinkScroll>
           </li>
@@ -150,10 +132,7 @@ function Navigation() {
           ${activePage === 'contactMe' ? 'text-details' : 'text-white'}
           uppercase ml-10 text-sm hover:border-b`}>
               <LinkScroll 
-                onClick={() => {
-                  handleScroll('contactMe');
-                  setActivePage('contactMe');
-                }}>
+               onClick={() => handleSectionClick('contactMe')}>
                 Contact
             </LinkScroll>
           </li>
@@ -265,5 +244,45 @@ function Navigation() {
 
   )
 }
-
 export default Navigation
+
+
+  // useEffect(() => {
+  //   // Update active page when user scrolls
+  //   const handleScroll = () => {
+  //     const currentPosition = window.pageYOffset;
+
+  //     const homeSection = document.getElementById("hero");
+  //     const aboutSection = document.getElementById("about");
+  //     const projectsSection = document.getElementById("projects");
+  //     const techStackSection = document.getElementById("tech-stack");
+  //     const contactMeSection = document.getElementById("contactMe");
+
+  //     if (currentPosition <= homeSection.offsetTop) {
+  //       setActivePage("hero");
+  //     } else if (
+  //       currentPosition >= aboutSection.offsetTop &&
+  //       currentPosition < projectsSection.offsetTop
+  //     ) {
+  //       setActivePage("about");
+  //     } else if (
+  //       currentPosition >= projectsSection.offsetTop &&
+  //       currentPosition < techStackSection.offsetTop
+  //     ) {
+  //       setActivePage("projects");
+  //     } else if (
+  //       currentPosition >= techStackSection.offsetTop &&
+  //       currentPosition < contactMeSection.offsetTop
+  //     ) {
+  //       setActivePage("tech-stack");
+  //     } else if (currentPosition >= contactMeSection.offsetTop) {
+  //       setActivePage("contactMe");
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
