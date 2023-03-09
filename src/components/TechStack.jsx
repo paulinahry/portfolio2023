@@ -3,8 +3,8 @@ import { FaReact } from 'react-icons/fa';
 import { RiHtml5Line } from 'react-icons/ri';
 import { DiCss3, DiJavascript, DiNodejsSmall, DiSass } from 'react-icons/di';
 import { SiTailwindcss, SiFigma, SiGithub } from 'react-icons/si';
-import { BsFillSuitHeartFill, BsHeart } from 'react-icons/bs';
-import { CircularProgressbar, CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
+import { BsHeart } from 'react-icons/bs';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import VisibilitySensor from 'react-visibility-sensor';
 
@@ -113,7 +113,7 @@ function TechStack() {
           <div style={iconsStyle}>
             <SiFigma size={45} /> Figma
           </div>
-            <AnimatedCircularProgressbar percentage={80} />
+            <AnimatedCircularProgressbar percentage={70} />
         </div>
 
         <div className='m-4'>
