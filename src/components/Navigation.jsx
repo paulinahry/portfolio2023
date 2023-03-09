@@ -41,7 +41,7 @@ function Navigation() {
     let offset = 0;
     switch (sectionID) {
       case 'hero':
-        offset = -400
+        offset = -550
         break;
       case 'about':
         offset = -100
@@ -51,9 +51,6 @@ function Navigation() {
         break;
       case 'tech-stack':
         offset = -150
-        break;
-      case 'contactMe':
-        offset = 200
         break;
       default:
         offset = 0
@@ -194,14 +191,14 @@ function Navigation() {
 
               <LinkScroll onClick={()=> {
                 handleNavigation()
-                handleScroll('hero')
+                handleSectionClick('hero')
               }}>
                   <li className='px-6 my-4 text-sm' >Home</li>
                 </LinkScroll>
 
                 <LinkScroll onClick={()=> {
                   handleNavigation()
-                  handleScroll('about')
+                  handleSectionClick('about')
                   }} >
                   
                     <li className='px-6 my-4 text-sm' >About</li>
@@ -209,21 +206,21 @@ function Navigation() {
 
                 <LinkScroll onClick={()=> {
                   handleNavigation()
-                  handleScroll('tech-stack')
+                  handleSectionClick('tech-stack')
                   }}>
                    <li className=' px-6 my-4 text-sm' >tech-stack</li>
                 </LinkScroll>
 
                 <LinkScroll onClick={()=> {
                   handleNavigation()
-                  handleScroll('projects')
+                  handleSectionClick('projects')
                   }}>
                     <li className='px-6 my-4 text-sm' >Projects</li>
                 </LinkScroll>
 
                 <LinkScroll onClick={()=>{
                   handleNavigation()
-                  handleScroll('contactMe')
+                  handleSectionClick('contactMe')
                   }}>
                     <li className='px-6 my-4 text-sm'>Contact</li>
                 </LinkScroll>
@@ -245,44 +242,3 @@ function Navigation() {
   )
 }
 export default Navigation
-
-
-  // useEffect(() => {
-  //   // Update active page when user scrolls
-  //   const handleScroll = () => {
-  //     const currentPosition = window.pageYOffset;
-
-  //     const homeSection = document.getElementById("hero");
-  //     const aboutSection = document.getElementById("about");
-  //     const projectsSection = document.getElementById("projects");
-  //     const techStackSection = document.getElementById("tech-stack");
-  //     const contactMeSection = document.getElementById("contactMe");
-
-  //     if (currentPosition <= homeSection.offsetTop) {
-  //       setActivePage("hero");
-  //     } else if (
-  //       currentPosition >= aboutSection.offsetTop &&
-  //       currentPosition < projectsSection.offsetTop
-  //     ) {
-  //       setActivePage("about");
-  //     } else if (
-  //       currentPosition >= projectsSection.offsetTop &&
-  //       currentPosition < techStackSection.offsetTop
-  //     ) {
-  //       setActivePage("projects");
-  //     } else if (
-  //       currentPosition >= techStackSection.offsetTop &&
-  //       currentPosition < contactMeSection.offsetTop
-  //     ) {
-  //       setActivePage("tech-stack");
-  //     } else if (currentPosition >= contactMeSection.offsetTop) {
-  //       setActivePage("contactMe");
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
