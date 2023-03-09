@@ -1,13 +1,13 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import React, { useState } from 'react';
-import { SiSpreadshirt } from 'react-icons/si';
+import Link from 'next/link'
+import Image from 'next/image'
+import React, { useState } from 'react'
+import { SiSpreadshirt } from 'react-icons/si'
 
 function ProjectCard({ title, stack, imgSrc, vercel, github }) {
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState(false)
 
   const handleShowDetails = () => {
-    setShowDetails(!showDetails);
+    setShowDetails(!showDetails)
   };
 
   return (
