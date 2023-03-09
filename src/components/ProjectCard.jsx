@@ -16,7 +16,7 @@ function ProjectCard({ title, stack, imgSrc, vercel, github }) {
       className='project-card-container 
       relative mx-2 border rounded mt-4 
       w-[16rem] h-[16rem] md:w-[19rem] md:h-[19rem] 
-      opacity-60 hover:opacity-100 bg-opacity-50 hover:bg-opacity-50'
+      opacity-70 hover:opacity-100 bg-opacity-50 hover:bg-opacity-50'
     >
       <div className='w-full h-full'>
         <div aria-label='image-wrapper' className='relative h-full'>
@@ -55,7 +55,7 @@ function ProjectCard({ title, stack, imgSrc, vercel, github }) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default ProjectCard;
