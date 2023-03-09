@@ -1,44 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaReact } from 'react-icons/fa';
 import { RiHtml5Line } from 'react-icons/ri';
 import { DiCss3, DiJavascript, DiNodejsSmall, DiSass } from 'react-icons/di';
 import { SiTailwindcss, SiFigma, SiGithub } from 'react-icons/si';
 import { BsHeart } from 'react-icons/bs';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
-import VisibilitySensor from 'react-visibility-sensor';
-
+import AnimatedCircularProgressbar from './ProgressBar';
 
 
 function TechStack() {
-
-  function AnimatedCircularProgressbar({ percentage }) {
-    const [animationStart, setAnimationStart] = useState(false);
-  
-    const handleVisibilityChange = (isVisible) => {
-      isVisible && setAnimationStart(true)
-      
-    }
-
-  
-    const commonStyles = buildStyles({
-      pathColor: '#4ff7b2',
-      textColor: '#4ff7b2',
-      trailColor: '#0B4147',
-    })
-  
-    return (
-      <VisibilitySensor onChange={handleVisibilityChange} partialVisibility={true}>
-        <div className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px]">
-          <CircularProgressbar
-            value={animationStart ? percentage : 0}
-            text={`${animationStart ? percentage : 0}%`}
-            styles={commonStyles}
-          />
-        </div>
-    </VisibilitySensor>
-    )
-  }
 
 
   // icons styling

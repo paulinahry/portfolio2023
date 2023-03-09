@@ -8,7 +8,7 @@ function ProjectCard({ title, stack, imgSrc, vercel, github }) {
 
   const handleShowDetails = () => {
     setShowDetails(!showDetails)
-  };
+  }
 
   return (
     <div
