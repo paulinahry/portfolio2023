@@ -15,8 +15,8 @@ function Projects() {
       title: 'My Personal Portfolio',
       stack: 'JavaScript, React, Tailwind, Nextjs' ,
       imgSrc: portfolio,
-      vercel: '',
-      github: ''
+      vercel: 'https://portfolio2023-eta.vercel.app/',
+      github: 'https://github.com/paulinahry/portfolio2023'
     },
     {
       title: 'Jobsy.',
@@ -33,7 +33,7 @@ function Projects() {
       github: 'https://github.com/paulinahry/tip_calculator_pauhry'
     },
     {
-      title: 'Login Template',
+      title: 'Login Template - basic React knowladge',
       stack: 'JavaScript, React, Firebase, SASS' ,
       imgSrc: reactLoginOut,
       vercel: 'https://react-login-create-account.vercel.app/',

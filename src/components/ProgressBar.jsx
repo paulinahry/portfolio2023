@@ -18,10 +18,9 @@ function AnimatedCircularProgressbar({ percentage }) {
     })
 
 
-
     return (
       <VisibilitySensor onChange={handleVisibilityChange} partialVisibility={true}>
-        <div className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px]">
+        <div className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] ">
           <CircularProgressbar
             value={animationStart ? percentage : 0}
             text={`${animationStart ? percentage : 0}%`}
