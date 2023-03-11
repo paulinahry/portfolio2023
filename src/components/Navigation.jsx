@@ -1,4 +1,4 @@
-import { Link as LinkScroll, scroller } from 'react-scroll'
+import { scroller } from 'react-scroll'
 import React, { useState, useEffect } from 'react'
 // COMPONENTS
 import Socials from './Socials'
@@ -41,13 +41,13 @@ function Navigation() {
     let offset = 0;
     switch (sectionID) {
       case 'hero':
-        offset = -550
+        offset = -350
         break;
       case 'about':
-        offset = -100
+        offset = -300
         break;
       case 'projects':
-        offset = -50
+        offset = -250
         break;
       case 'tech-stack':
         offset = -150
@@ -91,47 +91,47 @@ function Navigation() {
           <li className={`
           ${activePage === 'hero' ? 'text-details' : 'text-white'}
           uppercase ml-10 text-sm hover:border-b `}>
-             <LinkScroll 
+             <a 
               onClick={() => handleSectionClick('hero')}>
               Home
-             </LinkScroll>
+             </a>
           </li>
 
      
           <li className={`
           ${activePage === 'about' ? 'text-details' : 'text-white'}
           uppercase ml-10 text-sm hover:border-b `}>
-            <LinkScroll 
+            <a 
              onClick={() => handleSectionClick('about')}>
               About
-            </LinkScroll>
+            </a>
           </li>
 
           <li className={`
           ${activePage === 'projects' ? 'text-details' : 'text-white'}
           uppercase ml-10 text-sm hover:border-b`}>
-             <LinkScroll 
+             <a 
              onClick={() => handleSectionClick('projects')}>
                 Projects
-            </LinkScroll>
+            </a>
           </li>
 
           <li className={`
           ${activePage === 'tech-stack' ? 'text-details' : 'text-white'}
           uppercase ml-10 text-sm hover:border-b w-20`}>
-            <LinkScroll 
+            <a 
               onClick={() => handleSectionClick('tech-stack')}>
               Tech-stack
-            </LinkScroll>
+            </a>
           </li>
 
           <li className={`
           ${activePage === 'contactMe' ? 'text-details' : 'text-white'}
           uppercase ml-10 text-sm hover:border-b`}>
-              <LinkScroll 
+              <a 
                onClick={() => handleSectionClick('contactMe')}>
                 Contact
-            </LinkScroll>
+            </a>
           </li>
 
         </ul>
@@ -189,41 +189,41 @@ function Navigation() {
                     >
               <ul className='py-4 uppercase flex-col '>
 
-              <LinkScroll onClick={()=> {
+              <a onClick={()=> {
                 handleNavigation()
                 handleSectionClick('hero')
               }}>
                   <li className='px-6 my-4 text-sm' >Home</li>
-                </LinkScroll>
+                </a>
 
-                <LinkScroll onClick={()=> {
+                <a onClick={()=> {
                   handleNavigation()
                   handleSectionClick('about')
                   }} >
                   
                     <li className='px-6 my-4 text-sm' >About</li>
-                </LinkScroll>
+                </a>
 
-                <LinkScroll onClick={()=> {
+                <a onClick={()=> {
                   handleNavigation()
                   handleSectionClick('tech-stack')
                   }}>
                    <li className=' px-6 my-4 text-sm' >tech-stack</li>
-                </LinkScroll>
+                </a>
 
-                <LinkScroll onClick={()=> {
+                <a onClick={()=> {
                   handleNavigation()
                   handleSectionClick('projects')
                   }}>
                     <li className='px-6 my-4 text-sm' >Projects</li>
-                </LinkScroll>
+                </a>
 
-                <LinkScroll onClick={()=>{
+                <a onClick={()=>{
                   handleNavigation()
                   handleSectionClick('contactMe')
                   }}>
                     <li className='px-6 my-4 text-sm'>Contact</li>
-                </LinkScroll>
+                </a>
               </ul>
 
 
