@@ -12,25 +12,24 @@ import ContactMe from '../src/components/ContactMe'
 
 export default function Home() {
   return (
-    <div >
+    <div>
       <Head>
         <title>Paulina Hryszko | Frontend Developer</title>
         <meta name="description" content="Frontend Web Developer based in Germany" />
-        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"/>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon/favicon.ico" type="image/svg+xml"/>
+
       </Head>
 
-      <Layout > 
+      <Layout>
         <Navigation />
         <IntroSign />
         <Hero />
         <About />
         <Projects />
-        <TechStack />   
+        <TechStack />
         <ContactMe />
         <Footer />
       </Layout>
-
     </div>
   )
 }
