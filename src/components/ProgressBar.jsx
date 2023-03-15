@@ -7,7 +7,7 @@ function AnimatedCircularProgressbar({ percentage }) {
     const [animationStart, setAnimationStart] = useState(false);
   
     const handleVisibilityChange = (isVisible) => {
-       setAnimationStart(isVisible)
+       isVisible && setAnimationStart(isVisible)
     }
 
     // progress bar styling
