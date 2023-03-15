@@ -5,7 +5,7 @@
 I am a Front End Developer, and this is a showcase of what I have learned during my one-year course at Digital Career Institute. 
 
 ### Project Status: _complete_ 
-**The project is now complete and can be viewed live** [here](https://portfolio2023-eta.vercel.app/)
+**The project is now complete and can be viewed live** [here](https://paulinahryszko.vercel.app/)
 
 
 
