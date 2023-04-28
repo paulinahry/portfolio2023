@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import { SiSpreadshirt } from 'react-icons/si'
 
-function ProjectCard({ title, stack, imgSrc, vercel, github }) {
+function ProjectCard({ title, stack, imgSrc, vercel, github, figma}) {
   const [showDetails, setShowDetails] = useState(false)
 
   const handleShowDetails = () => {
@@ -45,10 +45,21 @@ function ProjectCard({ title, stack, imgSrc, vercel, github }) {
               <Link href={vercel} target='_blank'>
                 <p className='text-md text-gray-500 font-medium underline'>Demo</p>
               </Link>
+
               <span className='mx-2 text-details'>|</span>
               <Link href={github} target='_blank'>
                 <p className='text-md text-gray-500 font-medium underline'>Code</p>
               </Link>
+              
+              {figma && (
+                <>
+                  <span className='mx-2 text-details'>|</span>
+                  <Link href={figma} target='_blank'>
+                    <p className='text-md text-gray-500 font-medium underline'>Figma</p>
+                  </Link>
+                </>
+              )}
+              
             </div>
           </div>
           {/* DETAILS CONTAINER END*/}

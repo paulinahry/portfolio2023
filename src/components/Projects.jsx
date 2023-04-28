@@ -21,6 +21,7 @@ function Projects() {
     {
       title: 'Jobsy.',
       stack: 'Typescript, React, MongoDB, Nodejs, Tailwind, Figma' ,
+      figma: 'https://www.figma.com/file/cmWtNE21nByCtTRUkoR2uS/Wireframing-DT?node-id=112-2815&t=dzIx6HSI6pDJx1oz-0',
       imgSrc: jobsy,
       vercel: 'https://jobsy-jobportal.netlify.app/',
       github: 'https://github.com/paulinahry/jobportal'
