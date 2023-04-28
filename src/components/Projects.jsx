@@ -51,10 +51,8 @@ function Projects() {
       title: 'Food Blog - basic HTML and CSS knowladge',
       stack: 'CSS(SASS), HTML5' ,
       imgSrc: uibstart,
-      vercel: 'not deployed',
       github: 'https://github.com/paulinahry/ProgrammingBasicFinalProjekt'
     },
-
   ]
   
 

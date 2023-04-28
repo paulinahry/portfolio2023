@@ -42,11 +42,16 @@ function ProjectCard({ title, stack, imgSrc, vercel, github, figma}) {
             <p className='text-gray-500'>{stack}</p>
 
             <div className='mt-4'>
-              <Link href={vercel} target='_blank'>
-                <p className='text-md text-gray-500 font-medium underline'>Demo</p>
-              </Link>
-
+            {vercel && (
+                <>
+                  <Link href={vercel} target='_blank'>
+                    <p className='text-md text-gray-500 font-medium underline'>Demo</p>
+                  </Link>
               <span className='mx-2 text-details'>|</span>
+
+                </>
+              )}
+
               <Link href={github} target='_blank'>
                 <p className='text-md text-gray-500 font-medium underline'>Code</p>
               </Link>
