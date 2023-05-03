@@ -2,19 +2,24 @@ import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import {SiSpreadshirt} from 'react-icons/si'
 
+const { REACT_APP_EMAILJS_USER_ID, REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID } = process.env
 
 export const ContactForm = () => {
   const form = useRef()
   const [isMessaageSent, setIsMessaageSent] = useState(false)
 
+console.log(process.env.REACT_APP_EMAILJS_SERVICE_ID)
+console.log(process.env.REACT_APP_EMAILJS_TEMPLATE_ID)
+console.log(process.env.REACT_APP_EMAILJS_USER_ID)
+
 
   const sendEmail = (e) => {
     e.preventDefault()
     emailjs.sendForm(
-      'service_75hqleq',
-      'template_1lcb1gr',
+      REACT_APP_EMAILJS_SERVICE_ID,
+      REACT_APP_EMAILJS_TEMPLATE_ID,
       form.current,
-      'mw0dY8GAvkKHN5IjE'
+      REACT_APP_EMAILJS_USER_ID
     )
       .then((result) => {
           console.log('msg sent: ',result.text)
