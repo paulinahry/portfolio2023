@@ -8,9 +8,6 @@ export const ContactForm = () => {
   const form = useRef()
   const [isMessaageSent, setIsMessaageSent] = useState(false)
 
-console.log(process.env.REACT_APP_EMAILJS_SERVICE_ID)
-console.log(process.env.REACT_APP_EMAILJS_TEMPLATE_ID)
-console.log(process.env.REACT_APP_EMAILJS_USER_ID)
 
 
   const sendEmail = (e) => {
