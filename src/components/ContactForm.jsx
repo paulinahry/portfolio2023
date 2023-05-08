@@ -2,14 +2,14 @@ import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import {SiSpreadshirt} from 'react-icons/si'
 
-const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 
-console.log(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
-console.log(process.env.REACT_APP_EMAILJS_SERVICE_ID);
-console.log(process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+console.log(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
+console.log(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID);
+console.log(process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID);
 
 
 export const ContactForm = () => {
