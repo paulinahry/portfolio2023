@@ -66,7 +66,10 @@ export const ContactForm = () => {
             value="Send" />
         </div>
 
-        {isLoading && <Spinner />} {/* Show spinner if loading */}
+
+         {/* Show spinner if loading */}
+        {isLoading && <Spinner />}
+
         {
           isMessaageSent && (
             <div className='text-details text-sm flex'>
