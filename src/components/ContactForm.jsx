@@ -3,11 +3,12 @@ import emailjs from '@emailjs/browser'
 import {SiSpreadshirt} from 'react-icons/si'
 import Spinner from './Spinner'
 
-const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
 
 export const ContactForm = () => {
+  const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
   const form = useRef()
   const [isMessaageSent, setIsMessaageSent] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
