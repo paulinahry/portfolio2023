@@ -2,12 +2,21 @@ import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import {SiSpreadshirt} from 'react-icons/si'
 
-const { REACT_APP_EMAILJS_USER_ID, REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID } = process.env
+const { 
+  REACT_APP_EMAILJS_TEMPLATE_ID,
+  REACT_APP_EMAILJS_SERVICE_ID, 
+  REACT_APP_EMAILJS_PUBLIC_KEY
+} = process.env
+
+
+console.log(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+console.log(process.env.REACT_APP_EMAILJS_SERVICE_ID);
+console.log(process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+
 
 export const ContactForm = () => {
   const form = useRef()
   const [isMessaageSent, setIsMessaageSent] = useState(false)
-
 
 
   const sendEmail = (e) => {
@@ -16,7 +25,7 @@ export const ContactForm = () => {
       REACT_APP_EMAILJS_SERVICE_ID,
       REACT_APP_EMAILJS_TEMPLATE_ID,
       form.current,
-      REACT_APP_EMAILJS_USER_ID
+      REACT_APP_EMAILJS_PUBLIC_KEY
     )
       .then((result) => {
           console.log('msg sent: ',result.text)
@@ -74,4 +83,4 @@ export const ContactForm = () => {
       </form>
     </section>
   )
-}
+  }
