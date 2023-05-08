@@ -2,11 +2,9 @@ import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import {SiSpreadshirt} from 'react-icons/si'
 
-const { 
-  REACT_APP_EMAILJS_TEMPLATE_ID,
-  REACT_APP_EMAILJS_SERVICE_ID, 
-  REACT_APP_EMAILJS_PUBLIC_KEY
-} = process.env
+const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
 
 console.log(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
@@ -22,10 +20,10 @@ export const ContactForm = () => {
   const sendEmail = (e) => {
     e.preventDefault()
     emailjs.sendForm(
-      REACT_APP_EMAILJS_SERVICE_ID,
-      REACT_APP_EMAILJS_TEMPLATE_ID,
+      serviceId,
+      templateId,
       form.current,
-      REACT_APP_EMAILJS_PUBLIC_KEY
+      publicKey
     )
       .then((result) => {
           console.log('msg sent: ',result.text)
