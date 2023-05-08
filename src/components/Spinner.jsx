@@ -7,10 +7,10 @@ const override = {
 };
 
 function Spinner() {
-  const [color, setColor] = useState('#00000');
+  const [color, setColor] = useState('#4ff7b2');
 
   return (
-    <div className="flex items-center">
+    <div>
       <PulseLoader
         color={color}
         loading={true}
